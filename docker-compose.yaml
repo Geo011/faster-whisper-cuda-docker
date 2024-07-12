@@ -4,9 +4,9 @@ services:
     build:
       context: ./docker/cuda
       dockerfile: Dockerfile    
-    command: --model medium-int8 --language en --beam-size 5
+    command: --model medium-int8 --language nl --beam-size 5
     volumes:
-      - /path/to/your/data/directory:/data
+      - /data/whisper:/data
     restart: unless-stopped
     ports:
       - 10300:10300
